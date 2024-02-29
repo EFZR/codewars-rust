@@ -9,7 +9,7 @@ How many times will the mother see the ball pass in front of her window (includi
 */
 
 pub fn bouncing_ball(h: f64, bounce: f64, window: f64) -> i32 {
-    if h < 1.0 || (bounce > 1.0 || bounce < 0.0) || window >= h {
+    if !(h > 0. && 0. < bounce && bounce < 1. && window < h) {
         return -1;
     }
 
